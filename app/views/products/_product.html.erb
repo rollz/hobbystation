@@ -1,0 +1,13 @@
+<div class="product">
+  <h3><%= product.name %></h3>
+  <% if product.image_filename.present? %>
+    <%= image_tag product.image_filename %>
+  <% end %>
+  <p><%= product.flavor_text %></p>
+  <%= radio_button_tag(:condition, "mint", checked = true) %>
+  <%= label_tag(:condition_mint, "Mint") %>
+  <%= radio_button_tag(:condition, "played") %>
+  <%= label_tag(:condition_played, "Played") %>
+  <%= select("display", "value", (0..product.stock_quantity).collect {| quantity | [ "#{quantity}", quantity ] }) %>
+  <%= number_to_currency(product.price) %>
+</div>
