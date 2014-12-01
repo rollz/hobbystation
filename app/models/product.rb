@@ -24,4 +24,6 @@ class Product < ActiveRecord::Base
     with: %r{\.gif|jpg|png}i,
     message: "must end with .gif, .jpg, or .png"
   }
+
+  # mount_uploader :image_filename, CardUploader
 end

@@ -43,4 +43,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # gem 'rmagick', '~> 2.13.2', :platforms => :ruby
 gem 'rmagick', '=2.13.2.mswin32', :platforms => :mswin
-gem "carrierwave"
+gem 'carrierwave'
