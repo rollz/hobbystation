@@ -9,7 +9,11 @@
 <body>
   <div id="container">
     <header class="block">
-      <h1>Hobbystation</h1>
+      <h1 class="left">Hobbystation</h1>
+      <%= form_tag '', method: :get, class: 'right' do %>
+        <%= text_field_tag :search_keywords %>
+        <%= submit_tag 'Search' %>
+      <% end %>
     </header>
 
     <%= yield %>

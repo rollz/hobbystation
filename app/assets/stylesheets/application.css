@@ -13,15 +13,24 @@
  *= require_tree .
  *= require_self
  */
-.product {
+#product {
 	border: 2px solid black;
 	margin: 10px;
 	padding: 10px;
 	width: 500px;
 }
 
-.product img {
+#product img {
 	width: 200px;
+}
+
+#product h3 {
+	border-bottom: 2px solid black;
+	padding: 10px;
+}
+
+header form {
+	display: inline-block;
 }
 
 .left {
@@ -55,4 +64,12 @@ div#container {
 	margin-left: auto;
 	margin-right: auto;
 	width: 790px;
+	box-shadow: 0 0 3px #888888;
+	border-radius: 8px;
+	padding: 10px;
+	background-color: #FFF;
+}
+
+body {
+	background-color: #E7E7E7;
 }
