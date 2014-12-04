@@ -3,6 +3,13 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   root to: 'finder#index'
+
+  get 'finder/pokemon' => 'finder#pokemon', as: 'pokemon'
+
+  get 'finder/magic' => 'finder#magic', as: 'magic'
+
+  get 'finder/yugioh' => 'finder#yugioh', as: 'yugioh'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

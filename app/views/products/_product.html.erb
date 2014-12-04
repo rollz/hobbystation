@@ -4,8 +4,12 @@
     <% if product.image_filename.present? %>
       <%= image_tag(product.image_filename, class: "left") %>
     <% end %>
-    <h4>Flavor Text</h4>
+    <h4>Flavor Text:</h4>
     <p><%= product.flavor_text %></p>
+    <h5>Category:</h5>
+    <% if product.category.present? %>
+      <p><%= product.category.name %></p>
+    <% end %>
   </section>
   <div>
     <%= form_tag("#", method: "get", class: "clear") do %>

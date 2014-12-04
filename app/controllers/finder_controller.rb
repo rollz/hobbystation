@@ -5,7 +5,15 @@ class FinderController < ApplicationController
     # @products_mint_single = Product.where(products_mint_single:, params[:product])
   end
 
-  def show
-    @product = Product.find(params[:id])
+  def pokemon
+    @pokemon = Product.where(category_id: 1).where(condition: 'mint')
+  end
+
+  def magic
+    @magic = Product.where(category_id: 2).where(condition: 'mint')
+  end
+
+  def yugioh
+    @yugioh = Product.where(category_id: 3).where(condition: 'mint')
   end
 end

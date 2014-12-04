@@ -7,11 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<aside>
-  
-</aside>
+  <div id="container">
+    <header class="block">
+      <h1>Hobbystation</h1>
+    </header>
 
-<%= yield %>
+    <%= yield %>
+
+    <aside>
+      <nav>
+        <ul>
+          <li><%= link_to 'Show All', root_path %></li>
+          <li><%= link_to 'Pokemon', pokemon_path %></li>
+          <li><%= link_to 'Magic: The Gathering', magic_path %></li>
+          <li><%= link_to 'Yu-Gi-Oh!', yugioh_path %></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <footer class="clear">
+      <p><a href="admin/dashboard#index">Admin Login</a></p>
+    </footer>
+  </div>
 
 </body>
 </html>

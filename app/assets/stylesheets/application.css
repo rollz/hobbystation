@@ -43,3 +43,16 @@
 .inline {
 	display: inline;
 }
+
+aside {
+	float: left; 
+	width: 180px;
+	min-height: 300px;
+}
+
+div#container {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 790px;
+}
