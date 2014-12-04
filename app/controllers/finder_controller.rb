@@ -4,4 +4,8 @@ class FinderController < ApplicationController
     @products_played = Product.where(condition: 'played')
     # @products_mint_single = Product.where(products_mint_single:, params[:product])
   end
+
+  def show
+    @product = Product.find(params[:id])
+  end
 end
