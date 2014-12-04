@@ -4,6 +4,7 @@
     <% if product.image_filename.present? %>
       <%= image_tag(product.image_filename, class: "left") %>
     <% end %>
+    <h4>Flavor Text</h4>
     <p><%= product.flavor_text %></p>
   </section>
   <div>
