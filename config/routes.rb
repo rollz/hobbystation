@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   get 'finder/magic' => 'finder#magic', as: 'magic'
 
   get 'finder/yugioh' => 'finder#yugioh', as: 'yugioh'
- 
+
+  # get 'admin/' => '', as: 'admin'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
