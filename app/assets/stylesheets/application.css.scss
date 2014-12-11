@@ -30,10 +30,6 @@
 	}
 }
 
-header form {
-	display: inline-block;
-}
-
 .left {
 	float: left;
 }
@@ -59,12 +55,12 @@ header form {
 }
 
 header {
-	height: 50px;
+	height: 80px;
 }
 
 aside {
 	float: left; 
-	width: 220px;
+	width: 200px;
 	min-height: 300px;
 }
 
@@ -94,7 +90,7 @@ aside nav ul li a:link {
 }
 
 aside nav ul li a:hover {
-	background: linear-gradient(#076B9E, #99CCFF);
+	border: 2px solid black;
 }
 
 aside nav ul li a:focus {
@@ -120,5 +116,4 @@ body {
 	float: right;
 	width: 250px;
 	padding: 10px;
-	border: solid 1px black;
 }

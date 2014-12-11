@@ -3,6 +3,10 @@ class FinderController < ApplicationController
     @products_mint = Product.where(condition: 'mint')
   end
 
+  def show
+    @product = Product.find(params[:id])
+  end
+
   def pokemon
     @pokemon = Product.where(category_id: 1).where(condition: 'mint')
   end
