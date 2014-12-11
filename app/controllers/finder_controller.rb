@@ -3,8 +3,13 @@ class FinderController < ApplicationController
     @products_mint = Product.where(condition: 'mint')
   end
 
-  def show
-    @product = Product.find(params[:id])
+  # def show
+  #   @product = Product.find(params[:id])
+  # end
+
+  def search_results
+    wildcard_keywords = '%' + params[:search_keywords] + '%'
+    @products = Product.where("name LIKE ?", wildcard_keywords)
   end
 
   def pokemon

@@ -108,6 +108,10 @@ div#container {
 	background-color: #FFF;
 }
 
+#search_keywords {
+	width: 150px;
+}
+
 body {
 	background-color: #E7E7E7;
 }
@@ -116,4 +120,13 @@ body {
 	float: right;
 	width: 250px;
 	padding: 10px;
+}
+
+header form {
+	width: 270px;
+	float: right;
+}
+
+section#main {
+	min-width: 500px;
 }
