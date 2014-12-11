@@ -16,6 +16,10 @@
 
  $border-style: 2px solid black;
 
+ h1 {
+ 	transform: rotate(-5deg);
+ }
+
 .product {
 	border: $border-style;
 	margin: 10px;
@@ -84,11 +88,7 @@ aside nav ul li a:link {
 	padding: 8px;
 	font-weight: bold;
 	margin: 0;
-}
-
-aside nav ul li a:link {
 	color: #333333;
-	font-weight: bold;
 }
 
 aside nav ul li a:hover {
