@@ -1,25 +1,27 @@
-<div id="product" class="block">
+<div class="product block">
   <h3><%= product.name %></h3>
-  <section>
-    <% if product.image_filename.present? %>
-      <%= image_tag(product.image_filename, class: "left") %>
-    <% end %>
-    <h4>Flavor Text:</h4>
-    <p><%= product.flavor_text %></p>
-    <h5>Category:</h5>
-    <% if product.category.present? %>
-      <p><%= product.category.name %></p>
-    <% end %>
-  </section>
-  <div>
-    <%= form_tag("#", method: "get", class: "clear") do %>
+    <div class="left">
+      <% if product.image_filename.present? %>
+        <%= image_tag(product.image_filename) %>
+      <% end %>
+    </div>
+    <div class="description">
+      <h4>Flavor Text:</h4>
+      <p><%= product.flavor_text %></p>
+      <h5>Category:</h5>
+      <% if product.category.present? %>
+        <p><%= product.category.name %></p>
+      <% end %>
+    </div>
+  <div style="text-align: right;" class="clear">
+    <form action="#" method="post">
       <%= radio_button_tag(:condition, "mint_#{product.id}", true) %>
-      <%= label_tag("condition_mint_#{product.id}", "Mint") %>
+      Mint
       <%= radio_button_tag(:condition, "played_#{product.id}") %>
-      <%= label_tag("condition_played_#{product.id}", "Played") %>
+      Played
       <%= select(:quantity, product.id, (0..product.stock_quantity).collect {| quantity | [ "#{quantity}", quantity ] }) %>
-      <%= number_to_currency(product.price) %>
-      <%= submit_tag("Add to cart") %>
-    <% end %>
+      <strong><%= number_to_currency(product.price) %></strong>
+      <%= button_tag("Add to cart") %>
+    </form>
   </div>
 </div>

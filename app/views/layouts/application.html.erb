@@ -10,10 +10,10 @@
   <div id="container">
     <header class="block">
       <h1 class="left">Hobbystation</h1>
-      <%= form_tag '', method: :get, class: 'right' do %>
-        <%= text_field_tag :search_keywords %>
-        <%= submit_tag 'Search' %>
-      <% end %>
+      <div class="right">
+        <%= text_field_tag :search_keywords, nil %>
+        <button name="search" type="button">Search</button>
+      </div>
     </header>
 
     <%= yield %>
@@ -30,7 +30,7 @@
     </aside>
 
     <footer class="clear">
-      <p><a href="admin/dashboard#index">Admin Login</a></p>
+      <p><%= link_to 'Admin Login', admin_path %></p>
     </footer>
   </div>
 
