@@ -1,8 +1,9 @@
 <section id="main" class="right">
   <h2>Search Results</h2>
-  <% if @products.size.zero? %>
+  <% if @products.size.zero? and @category.size.zero? %>
     <p>No Products found.</p>
   <% else %>
     <%= render @products %>
+    <%= render @category %>
   <% end %>
 </section>

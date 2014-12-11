@@ -14,8 +14,10 @@
  *= require_self
  */
 
+ $border-style: 2px solid black;
+
 .product {
-	border: 2px solid black;
+	border: $border-style;
 	margin: 10px;
 	padding: 10px;
 	width: 500px;
@@ -25,7 +27,7 @@
 	}
 
 	h3 {
-		border-bottom: 2px solid black;
+		border-bottom: $border-style;
 		padding: 10px;
 	}
 }
@@ -90,11 +92,11 @@ aside nav ul li a:link {
 }
 
 aside nav ul li a:hover {
-	border: 2px solid black;
+	border: $border-style;
 }
 
 aside nav ul li a:focus {
-	border: 2px solid black;
+	border: $border-style;
 }
 
 div#container {

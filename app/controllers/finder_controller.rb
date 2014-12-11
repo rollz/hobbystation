@@ -10,17 +10,18 @@ class FinderController < ApplicationController
   def search_results
     wildcard_keywords = '%' + params[:search_keywords] + '%'
     @products = Product.where("name LIKE ?", wildcard_keywords)
+    @category = Product.all.categories.find("name LIKE ?", wildcard_keywords)
   end
 
   def pokemon
-    @pokemon = Product.where(category_id: 1).where(condition: 'mint')
+    @pokemon = Product.where(category_id: 1).where(condition: 'mint').order(:name)
   end
 
   def magic
-    @magic = Product.where(category_id: 2).where(condition: 'mint')
+    @magic = Product.where(category_id: 2).where(condition: 'mint').order(:name)
   end
 
   def yugioh
-    @yugioh = Product.where(category_id: 3).where(condition: 'mint')
+    @yugioh = Product.where(category_id: 3).where(condition: 'mint').order(:name)
   end
 end
